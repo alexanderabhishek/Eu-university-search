@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>European University Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Search European Universities</h1>
+    <form id="searchForm">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+            <option value="Italy">Spain</option>
+            <!-- Add more countries -->
+        </select>
+        <label for="name_filter">University Name (optional):</label>
+        <input type="text" id="name_filter" name="name_filter">
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

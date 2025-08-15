@@ -1,10 +1,53 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
+    margin: 30px;
+    background-color: #f0f4f8;
 }
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
 form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    gap: 10px;
 }
-input, select {
-    margin: 5px;
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005ea2;
+}
+
+#results {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.university-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.university-card h3 {
+    margin-top: 0;
+    color: #0078d4;
 }

@@ -52,3 +52,24 @@ document.getElementById("searchForm").addEventListener("submit", async function(
         document.getElementById("results").innerHTML = "<p>Something went wrong. Please try again later.</p>";
     }
 });
+function handleCopilot() {
+    const input = document.getElementById("copilot-input").value.trim().toLowerCase();
+    const log = document.getElementById("copilot-log");
+
+    let response = "🤖 Copilot: ";
+
+    if (input.includes("germany")) {
+        response += "Germany has excellent public universities like TU Munich and University of Heidelberg. Want to search now?";
+    } else if (input.includes("fees")) {
+        response += "Most public universities in Europe have low or no tuition fees for EU students. Private ones vary widely.";
+    } else if (input.includes("business")) {
+        response += "Looking for business schools? Try filtering by 'private' and searching for 'Business' in the name.";
+    } else if (input.includes("help")) {
+        response += "You can search by country, name, and type. I’ll guide you if you get stuck!";
+    } else {
+        response += "I’m still learning! Try asking about countries, fees, or university types.";
+    }
+
+    log.innerText += `\nYou: ${input}\n${response}\n`;
+    document.getElementById("copilot-input").value = "";
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>European University Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,17 +14,23 @@
             <option value="France">France</option>
             <option value="Italy">Italy</option>
             <option value="Spain">Spain</option>
-            <!-- Add more countries -->
+            <option value="Netherlands">Netherlands</option>
+            <!-- Add more countries as needed -->
         </select>
-        <select id="country" name="country">
-            <option value="Public">Public</option>
-            <option value="Private">Private</option>
-            <!-- Add more countries -->
-        </select>
+
         <label for="name_filter">University Name (optional):</label>
-        <input type="text" id="name_filter" name="name_filter">
+        <input type="text" id="name_filter" name="name_filter" placeholder="e.g. Business, Technical">
+
+        <label for="type_filter">Type:</label>
+        <select id="type_filter" name="type_filter">
+            <option value="all">All</option>
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+        </select>
+
         <button type="submit">Search</button>
     </form>
+
     <div id="results"></div>
 
     <script src="script.js"></script>

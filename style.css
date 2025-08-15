@@ -51,3 +51,35 @@ button:hover {
     margin-top: 0;
     color: #0078d4;
 }
+
+#copilot-box {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#copilot-log {
+    min-height: 100px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+#copilot-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#copilot-box button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+

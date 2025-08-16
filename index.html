@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>European University Search</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>European University Explorer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Search European Universities</h1>
-    <form id="searchForm">
-        <label for="country">Country:</label>
-        <select id="country" name="country">
-            <option value="Germany">Germany</option>
-            <option value="France">France</option>
-            <option value="Italy">Italy</option>
-            <option value="Spain">Spain</option>
-            <option value="Netherlands">Netherlands</option>
-            <!-- Add more countries as needed -->
-        </select>
+  <h1>🎓 European University Explorer</h1>
 
-        <label for="name_filter">University Name (optional):</label>
-        <input type="text" id="name_filter" name="name_filter" placeholder="e.g. Business, Technical">
+  <form id="filterForm">
+    <label for="countries">Select Countries:</label>
+    <select id="countries" multiple>
+      <option value="Germany">Germany</option>
+      <option value="France">France</option>
+      <option value="Italy">Italy</option>
+      <option value="Spain">Spain</option>
+      <option value="Netherlands">Netherlands</option>
+    </select>
 
-        <label for="type_filter">Type:</label>
-        <select id="type_filter" name="type_filter">
-            <option value="all">All</option>
-            <option value="public">Public</option>
-            <option value="private">Private</option>
-        </select>
+    <label for="type_filter">Type:</label>
+    <select id="type_filter">
+      <option value="all">All</option>
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+    </select>
 
-        <button type="submit">Search</button>
-    </form>
-   
-    <div id="results"></div>
-    <h2>Ask Copilot Assistant</h2>
-    <div id="copilot-box">
-        <div id="copilot-log"></div>
-        <input type="text" id="copilot-input" placeholder="Ask about universities, fees, or countries...">
-        <button onclick="handleCopilot()">Ask</button>
-    </div>
+    <label for="subject_filter">Subject Keyword:</label>
+    <input type="text" id="subject_filter" placeholder="e.g. engineering, business">
 
-    <script src="script.js"></script>
+    <label for="tuition_filter">Tuition Range:</label>
+    <select id="tuition_filter">
+      <option value="any">Any</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </form>
+
+  <div id="results"></div>
+
+  <h2>🧑‍💻 Copilot Assistant</h2>
+  <div id="copilot-box">
+    <div id="copilot-log"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,85 +1,86 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+h1, h2 {
+  text-align: center;
+  color: #0078d4;
+  margin-bottom: 1rem;
 }
 
+/* Form layout */
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto 30px auto;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-input, select, button {
-    padding: 10px;
-    font-size: 16px;
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
-button {
-    background-color: #0078d4;
-    color: white;
-    border: none;
-    cursor: pointer;
+select, input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-button:hover {
-    background-color: #005ea2;
-}
-
+/* Results */
 #results {
-    max-width: 700px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .university-card {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-left: 4px solid #0078d4;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .university-card h3 {
-    margin-top: 0;
-    color: #0078d4;
+  margin-top: 0;
+  color: #005fa3;
 }
 
+/* Copilot Assistant */
 #copilot-box {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 #copilot-log {
-    min-height: 100px;
-    margin-bottom: 10px;
-    font-family: monospace;
-    white-space: pre-wrap;
+  font-family: monospace;
+  white-space: pre-wrap;
+  color: #444;
+  font-size: 1rem;
 }
 
-#copilot-input {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
 }
-
-#copilot-box button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #0078d4;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
